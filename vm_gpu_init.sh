@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # init
 apt update
 apt -y install htop screen
@@ -43,3 +45,8 @@ apt install -y ufw; ufw allow 30333/tcp; ufw allow 22/tcp; ufw allow 8000:8999/t
 # Default Packages
 apt update && apt -y upgrade && apt -y install build-essential git clang curl libssl-dev llvm libudev-dev make protobuf-compiler && apt -y autoremove
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Install Anaconda
+wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+bash /tmp/Anaconda3-2020.02-Linux-x86_64.sh
+export PATH="/root/anaconda3/bin:/root/anaconda3/condabin:$PATH"
