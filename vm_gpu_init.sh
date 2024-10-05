@@ -2,7 +2,7 @@
 
 # Dont rerun
 if test -f "/home/Ubuntu/skip_vm_gpu_init.txt"; then 
-    echo "File not found!"
+    echo "Already ran in the past, skipping"
     exit 0
 fi
 
