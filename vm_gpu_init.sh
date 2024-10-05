@@ -13,8 +13,8 @@ apt -y upgrade
 
 # Install Nvidia Drivers
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
-wget -O /home/Ubuntu/cuda-keyring_1.0-1_all.deb https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-keyring_1.0-1_all.deb
-dpkg -i /home/Ubuntu/cuda-keyring_1.0-1_all.deb
+wget -O /tmp/cuda-keyring_1.0-1_all.deb https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-keyring_1.0-1_all.deb
+dpkg -i /tmp/cuda-keyring_1.0-1_all.deb
 apt update
 apt -y install cuda-drivers
 
