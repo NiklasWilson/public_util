@@ -1,7 +1,7 @@
 # init
 apt update
-apt install htop screen
-apt upgrade
+apt -y install htop screen
+apt -y upgrade
 
 # Install Nvidia Drivers
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
