@@ -13,8 +13,8 @@ apt -y upgrade
 
 # Install Nvidia Drivers
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
-wget -O https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-keyring_1.0-1_all.deb
-dpkg -i cuda-keyring_1.0-1_all.deb
+wget -O /home/Ubuntu/cuda-keyring_1.0-1_all.deb https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-keyring_1.0-1_all.deb
+dpkg -i /home/Ubuntu/cuda-keyring_1.0-1_all.deb
 apt update
 apt -y install cuda-drivers
 
@@ -51,3 +51,4 @@ apt install -y ufw; ufw allow 30333/tcp; ufw allow 22/tcp; ufw allow 8000:8999/t
 # Default Packages
 apt update && apt -y upgrade && apt -y install build-essential git clang curl libssl-dev llvm libudev-dev make protobuf-compiler && apt -y autoremove
 touch /home/Ubuntu/skip_vm_gpu_init.txt
+reboot
