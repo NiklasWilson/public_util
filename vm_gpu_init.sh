@@ -7,7 +7,7 @@ if test -f "/home/Ubuntu/skip_vm_gpu_init.txt"; then
 fi
 
 # Setup default apt packages
-apt -y update && apt -y upgrade && apt -y install wget build-essential git clang curl libssl-dev llvm libudev-dev make protobuf-compiler htop screen ca-certificates curl gnupg npm ufw software-properties-common && apt -y autoremove
+apt -y update && apt -y upgrade && apt -y install lshw wget build-essential git clang curl libssl-dev llvm libudev-dev make protobuf-compiler htop screen ca-certificates curl gnupg npm ufw software-properties-common && apt -y autoremove
 apt -y install linux-headers-$(uname -r)
 
 # Setup default UFW firewall rules
